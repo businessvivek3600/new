@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smart_bazaar/features/authentication/screens/login/login_screen.dart';
 import 'package:smart_bazaar/features/authentication/screens/onboarding_screens/on_boarding.dart';
 
 

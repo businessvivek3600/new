@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:smart_bazaar/features/personalization/screens/settings/setting_screen.dart';
 import 'package:smart_bazaar/features/shop/screens/home/home.dart';
+import 'package:smart_bazaar/features/shop/screens/wishList/favourite_screen.dart';
 import 'package:smart_bazaar/utils/helpers/helper_functions.dart';
 
+import 'features/shop/screens/store/store_screen.dart';
 import 'utils/constants/colors.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -45,9 +48,9 @@ body: Obx(
 class NavigationController extends GetxController{
   Rx<int> selectedIndex = 0.obs;
   final screens = [
-   HomeScreen(),
-    Container(color: Colors.purple,),
-    Container(color: Colors.blue,),
-    Container(color: Colors.orange,),
+   const HomeScreen(),
+    const StoreScreen(),
+   const FavouriteScreen(),
+    const SettingScreen(),
   ];
 }

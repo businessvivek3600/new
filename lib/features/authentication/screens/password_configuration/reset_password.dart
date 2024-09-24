@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:smart_bazaar/utils/constants/image_strings.dart';
 import 'package:smart_bazaar/utils/constants/sizes.dart';
 import 'package:smart_bazaar/utils/constants/text_strings.dart';
 
-import '../../../../utils/constants/colors.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
 class ResetPassword extends StatefulWidget {
@@ -28,12 +26,12 @@ actions: [
 ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           children: [
             ///Image
             Image(
-              image:  AssetImage(TImages.deliveredEmailIllustration),
+              image:  const AssetImage(TImages.deliveredEmailIllustration),
               width: THelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(height: TSizes.spaceBtwSections),

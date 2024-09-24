@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:smart_bazaar/utils/constants/colors.dart';
 
 class TSectionHeading extends StatelessWidget {
   const TSectionHeading({
@@ -30,7 +31,7 @@ class TSectionHeading extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         if (showActionButton)
-          TextButton(onPressed: onPressed, child: Text(buttonTitle))
+          TextButton(onPressed: onPressed, child: Text(buttonTitle,style: const TextStyle(color: TColors.textPrimary),))
       ],
     );
   }

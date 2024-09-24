@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:smart_bazaar/common/widgets/login_signup/form_divider.dart';
 import 'package:smart_bazaar/common/widgets/login_signup/social_buttons.dart';
 import 'package:smart_bazaar/utils/constants/colors.dart';

@@ -69,7 +69,7 @@ class TLoginForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
-                Get.offAll(NavigationMenu());
+                Get.offAll(const NavigationMenu());
               },
               child: const Text(
                 TTexts.signIn,

@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:smart_bazaar/features/authentication/controllers/onBoarding_controller.dart';
 
 import '../../../../../utils/constants/colors.dart';

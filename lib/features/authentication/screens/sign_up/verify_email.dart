@@ -6,7 +6,6 @@ import 'package:smart_bazaar/features/authentication/screens/login/login_screen.
 import 'package:smart_bazaar/utils/constants/image_strings.dart';
 import 'package:smart_bazaar/utils/constants/sizes.dart';
 import 'package:smart_bazaar/utils/constants/text_strings.dart';
-import 'package:smart_bazaar/utils/helpers/cloud_helper_functions.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
@@ -60,7 +59,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     Get.to(() => SuccessScreen(onPressed: () {
-                      Get.to(() => AuthScreen());
+                      Get.to(() => const AuthScreen());
                     }, title: TTexts.yourAccountCreatedTitle,
                     subTitle: TTexts.yourAccountCreatedSubTitle, image: TImages.staticSuccessIllustration,));
                   },

@@ -27,7 +27,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,7 +51,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.off(()=> ResetPassword());
+                  Get.off(()=> const ResetPassword());
                 },
                 child: const Text(
                   TTexts.submit,
