@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:smart_bazaar/common/widgets/layout/grid_layout.dart';
 import 'package:smart_bazaar/common/widgets/products_cart/product_card_vertical.dart';
 import 'package:smart_bazaar/common/widgets/texts/section_heading.dart';
@@ -6,6 +7,7 @@ import 'package:smart_bazaar/common/widgets/texts/section_heading.dart';
 import '../../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
+import '../../product_deatils/product_details.dart';
 
 class TCategoryTab extends StatelessWidget {
   const TCategoryTab({super.key});
@@ -47,7 +49,9 @@ class TCategoryTab extends StatelessWidget {
               ),
               TGridLayout(
                 itemCount: 4,
-                itemBuilder: (_, index) => const TProductCardVertical(),
+                itemBuilder: (_, index) =>  TProductCardVertical(onPressed: () {
+                  Get.to(const ProductDetail());
+                },),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
             ],

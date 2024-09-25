@@ -13,7 +13,7 @@ final Widget? child;
   @override
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
-      widget: Container(
+      child: Container(
         color: TColors.primary,
         padding: const EdgeInsets.all(0),
 

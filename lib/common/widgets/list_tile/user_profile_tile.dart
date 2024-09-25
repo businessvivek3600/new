@@ -8,10 +8,10 @@ import '../../../utils/constants/image_strings.dart';
 import '../images/t_circular_image.dart';
 
 class TUserProfileTile extends StatelessWidget {
-  const TUserProfileTile({
-    super.key,
+   TUserProfileTile({
+    super.key,required this.onPressed
   });
-
+VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -32,7 +32,7 @@ class TUserProfileTile extends StatelessWidget {
               .bodyMedium!
               .apply(color: TColors.white)),
       trailing: IconButton(
-          onPressed: () {},
+          onPressed: onPressed,
           icon: const Icon(
             Iconsax.edit,
             color: TColors.white,

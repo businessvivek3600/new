@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:smart_bazaar/utils/constants/colors.dart';
+import 'package:smart_bazaar/utils/helpers/helper_functions.dart';
 
 class TSectionHeading extends StatelessWidget {
   const TSectionHeading({
@@ -18,6 +19,7 @@ class TSectionHeading extends StatelessWidget {
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -31,7 +33,7 @@ class TSectionHeading extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         if (showActionButton)
-          TextButton(onPressed: onPressed, child: Text(buttonTitle,style: const TextStyle(color: TColors.textPrimary),))
+          TextButton(onPressed: onPressed, child: Text(buttonTitle,style: TextStyle(color: dark ?   TColors.buttonPrimary:TColors.textPrimary),))
       ],
     );
   }

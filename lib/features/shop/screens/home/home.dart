@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:smart_bazaar/common/widgets/products_cart/product_card_vertical.dart';
 import 'package:smart_bazaar/features/shop/screens/home/widgets/home_categories.darrt.dart';
@@ -8,6 +9,7 @@ import '../../../../common/widgets/custome_search_bar/custome_search_bar.darrt.d
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
+import '../product_deatils/product_details.dart';
 import 'widgets/home_appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'widgets/promo_slider.dart';
@@ -39,7 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 TSearchBar(
                   text: "Search in Store",
                   icon: Iconsax.search_normal,
-                  padding:EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
                 ),
                 SizedBox(height: TSizes.spaceBtwSections),
 
@@ -79,22 +82,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     TImages.promoBanner3
                   ],
                 ),
-                const SizedBox(
-                  height: TSizes.spaceBtwSections
-                ),
+                const SizedBox(height: TSizes.spaceBtwSections),
                 const TSectionHeading(
                   title: "Popular Products",
                   showActionButton: true,
                   onPressed: null,
+                ),
 
-                ),
-                const SizedBox(
-                    height: TSizes.spaceBtwSections
-                ),
                 ///Popular Products
                 TGridLayout(
                     itemCount: 6,
-                    itemBuilder: (p0, p1) => const TProductCardVertical(),
+                    itemBuilder: (p0, p1) => TProductCardVertical(
+                          onPressed: () {
+                            Get.to(const ProductDetail());
+                          },
+                        ),
                     mainAxisExtent: 288),
               ],
             ),

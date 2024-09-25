@@ -6,6 +6,7 @@ import 'package:smart_bazaar/common/widgets/icons/t_circular_icon.dart';
 import 'package:smart_bazaar/common/widgets/layout/grid_layout.dart';
 import 'package:smart_bazaar/common/widgets/products_cart/product_card_vertical.dart';
 import 'package:smart_bazaar/features/shop/screens/home/home.dart';
+import 'package:smart_bazaar/features/shop/screens/product_deatils/product_details.dart';
 import 'package:smart_bazaar/utils/constants/sizes.dart';
 
 class FavouriteScreen extends StatelessWidget {
@@ -31,7 +32,14 @@ class FavouriteScreen extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical(),)
+              TGridLayout(
+                itemCount: 4,
+                itemBuilder: (_, index) => TProductCardVertical(
+                  onPressed: () {
+                    Get.to(const ProductDetail());
+                  },
+                ),
+              )
             ],
           ),
         ),

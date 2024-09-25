@@ -4,6 +4,9 @@ import 'package:iconsax/iconsax.dart';
 import 'package:smart_bazaar/utils/constants/sizes.dart';
 import 'package:smart_bazaar/utils/device/device_utility.dart';
 
+import '../../../utils/constants/colors.dart';
+import '../../../utils/helpers/helper_functions.dart';
+
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TAppBar(
       {super.key,
@@ -19,18 +22,19 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? leadingOnPressed;
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showArrowBack
             ? IconButton(
-                icon: const Icon(Iconsax.arrow_left),
+                icon:  Icon(Iconsax.arrow_left,color: dark ? TColors.white : TColors.dark,),
                 onPressed: () => Get.back(),
               )
             : leadingIcon != null
                 ? IconButton(
-                    icon: Icon(leadingIcon),
+                    icon: Icon(leadingIcon,color: dark ? TColors.white : TColors.dark,),
                     onPressed: leadingOnPressed,
                   )
                 : null,
